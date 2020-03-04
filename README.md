@@ -10,14 +10,16 @@ Please follow the below instructions to setup the base minimum as pulling this r
 First of all, change to the folder `./scripts` and execute the following commands from the repository root folder `./`:
 
 ```console
-cd ./scripts
-# Make the script executable
-chmod +x setupRepository.sh
-# Execute the script
-./setupRespository.sh
+$ cd ./scripts
+$ # Make the script executable
+$ chmod +x setupRepository.sh
+$ # Execute the script
+$ ./setupRespository.sh
 ```
 
-This will start a Docker container with the latest release of NGINX to prepare a shared start.
+Please check the code in the `./scripts/setupRepository.sh` script for more details.
+
+The script will start a Docker container with the latest release of NGINX from Docker Hub to prepare a common starting point.
 Moreover, it will create local folders in the `./shared` directory of configuration `./etc/*` and web-page `./usr/*` files.
 
 ## Setup NGINX

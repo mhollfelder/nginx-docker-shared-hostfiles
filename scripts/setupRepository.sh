@@ -9,3 +9,5 @@ mkdir -p ./src/usr/share/nginx/html
 docker cp $id:/etc/nginx ./etc/nginx
 docker cp $id:/usr/share/nginx/html/ ./src/usr/share/nginx/html
 docker stop $id
+
+# From here, we can continue with configuring the files
