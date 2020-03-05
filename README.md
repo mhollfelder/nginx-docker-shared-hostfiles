@@ -11,7 +11,7 @@ NGINX/                      # The root folder './'
 ┣ docs/                     # Additional documentation
 ┣ scripts/                  # Setting up the basics - scripts to be used with Bash
 ┃ ┗ setupRepository.sh      # Setting up the `./shared` folder
-┣ shared/                   # The folder which the NGINX container uses for config and web-page files (shared with host)
+┣ shared/                   # The config/web-page NGINX container (shared with host)
 ┣ .gitignore                # Files which should be ignored for Git
 ┗ README.md                 # This file
 ```
