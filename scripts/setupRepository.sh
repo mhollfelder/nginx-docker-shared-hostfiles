@@ -17,13 +17,9 @@ DIR="$( cd -P "$( dirname "$SOURCE" )" >/dev/null 2>&1 && pwd )"
 docker build -t nginx_production "${DIR}/../docker"
 id=$(docker run --rm --name nginx_cp -p 80:80 -d nginx_production)
 mkdir -p ${DIR}/../shared/etc/
-<<<<<<< HEAD
 mkdir -p ${DIR}/../shared/usr/share/nginx/
-=======
-mkdir -p ${DIR}/../shared/nginx/
->>>>>>> 39710e573c50676e9de8da5d63c2c6b57d5cd7d1
 docker cp $id:/etc/nginx ${DIR}/../shared/etc/nginx
-docker cp $id:/usr/share/nginx/html/ ${DIR}/../shared/usr/share/nginx/html
+docker cp $id:/usr/share/nginx/ ${DIR}/../shared/usr/share/nginx/
 docker stop $id
 
 # From here, we can continue with configuring the files
