@@ -5,6 +5,7 @@ Sounds simple, but it took quite a time of online research plus trial and error.
 
 ```console
 NGINX/                      # The root folder './'
+┣ binaries/                 # Any binaries
 ┣ docker/                   # All Docker related files
 ┃ ┣ docker-compose.yml      # Orchestrate container and additional options, e.g. volumes with host mapping
 ┃ ┗ Dockerfile              # Create a single container
