@@ -16,8 +16,8 @@ DIR="$( cd -P "$( dirname "$SOURCE" )" >/dev/null 2>&1 && pwd )"
 # Copy the files from the NGINX Docker container to the local repository
 docker build -t nginx_production "${DIR}/../docker"
 id=$(docker run --rm --name nginx_cp -p 80:80 -d nginx_production)
-mkdir -p ${DIR}/../shared/etc/nginx
-mkdir -p ${DIR}/../shared/nginx/html
+mkdir -p ${DIR}/../shared/etc/
+mkdir -p ${DIR}/../shared/usr/share/nginx/
 docker cp $id:/etc/nginx ${DIR}/../shared/etc/nginx
 docker cp $id:/usr/share/nginx/html/ ${DIR}/../shared/usr/share/nginx/html
 docker stop $id
