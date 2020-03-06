@@ -21,7 +21,7 @@ echo "Docker ID is $(id)"
 echo "Trying to create backup - NO CHECK WILL BE DONE"
 mkdir -p ${DIR}/../shared/backup
 zip -r backup-$(date +%F).zip ${DIR}/../shared/backup
-echo "Creating shared folder structure structure..."
+echo "Creating shared folder structure..."
 mkdir -p ${DIR}/../shared/etc/
 mkdir -p ${DIR}/../shared/usr/share/nginx/
 echo "Copying files..."
@@ -30,7 +30,7 @@ docker cp $id:/usr/share/nginx/html ${DIR}/../shared/usr/share/nginx/
 echo "Stopping container"
 docker stop $id
 echo "Check shared folder to see whether all files could be copied!"
-echo "Especially, check the shared/etc* and /shared/usr/* folders that NGINX expected files EXIST."
+echo "Especially, check the shared/etc* and /shared/usr/* folders that all files required by NGINX exist."
 echo "WARNING: On Windows, symlinks cannot be copied and cp will abort - copy files manually!"
 
-# From here, we can continue with configuring the files
+# From here, one can continue with configuring the files
